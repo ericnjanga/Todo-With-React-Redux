@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './../styles/StyledTodos';
+import style from './../styles/StyledTodo';
 
 const Todo = ({ onClick, completed, text }) => {
 
