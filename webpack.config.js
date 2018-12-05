@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,15 +11,26 @@ module.exports = {
   module: {
     rules: [
       {
+        // For every JavaScript file
         test: /\.js$/,
-        exclude: /(node_modules)/,
+        exclude: /(node_modules)/,  // except the one in "node_modules"
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
+          loader: 'babel-loader', // use the following loaders
+          options: { // Activate the following options
+            presets: [
+              '@babel/preset-env', // babel environment
+              // 'stage-0', // stage 0 babel functionalities
+              '@babel/preset-react' // react conversion (JSX, ...)
+            ]
           }
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: '---My App',
+      filename: 'index.html',
+      template: './src/index.html'
+    })]
 }
