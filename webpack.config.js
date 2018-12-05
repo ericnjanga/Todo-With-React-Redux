@@ -1,6 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+/**
+ * NOTE:
+ * -----
+ * server is started with https://github.com/webpack/webpack-dev-server
+ */
+
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
