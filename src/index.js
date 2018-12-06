@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import style from './styles/StyledApp';
 
 const App = () => {
+
+  const { AppContainer } = style;
+
   return (
-    <div>
+    <AppContainer>
       <h1>+++ First react app with Webpack????</h1>
       <div>
         <h2>Thoughts</h2>
         <div>
           <h3>Container component</h3>
-          <p>React component that uses `store.subscribe()` to read a pat of the Redux state tree and supply props to a presentational component it renders.</p>
+          <p>React component that uses `store.subscribe()` to read a part of the Redux state tree and supply props to a presentational component it renders.</p>
+          <p>They're the ones hooking up presentational containers with Redux.</p>
         </div>
         <div>
           <h3>Difference between Presentational and Container components</h3>
@@ -79,7 +84,7 @@ const App = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </AppContainer>
   );
 }
 
