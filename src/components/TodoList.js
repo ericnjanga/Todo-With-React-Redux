@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Todo from './Todos';
+import Todo from './Todo';
 // import style from './../styles/StyledTodoList';
 
 const TodoList = ({ todos, onTodoClick }) => {

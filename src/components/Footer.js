@@ -1,6 +1,6 @@
 import React from 'react';
-import FitlerLink from './../containers/FitlerLink';
-import { VisibilityFilters } from './../actions';
+import FitlerLink from './../containers/FilterLink'
+import { VisibilityFilters } from './../actions'
 // import style from './../styles/StyledTodoList';
 
 const Footer = () => {
