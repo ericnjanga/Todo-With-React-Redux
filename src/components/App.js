@@ -20,6 +20,13 @@ const App = () => {
       <div className="lexic">
         <h2>Thoughts</h2>
         <div>
+          <h2>Why using Redux?</h2>
+          <ul>
+            <li>different parts of the code can’t change the state arbitrarily, causing hard-to-reproduce bugs.</li>
+            <li>Gives a better understanding of what's going on in the app (Changes are only made through actions). If something changed, we know why it changed (bye bye voodoo code)</li>
+          </ul>
+        </div>
+        <div>
           <h3>Container component</h3>
           <p>React component that uses <code>store.subscribe()</code> to read a part of the Redux state tree and supply props to a presentational component it renders.</p>
           <p>They're the ones hooking up presentational containers with Redux.</p>
