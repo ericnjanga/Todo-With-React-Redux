@@ -98,6 +98,15 @@ const App = () => {
             </li>
           </ul>
         </div>
+
+
+        <div>
+          <h2>Good Read</h2>
+          <ul>
+            <li><a href="https://redux.js.org/recipes/reducingboilerplate" target="_blank">Reducing Boilerplate</a></li>
+            <li><a href="https://github.com/redux-utilities/flux-standard-action" target="_blank">Flux Standard Action (how actions could be constructed)</a></li>
+          </ul>
+        </div>
       </div>
     </AppContainer>
   );
