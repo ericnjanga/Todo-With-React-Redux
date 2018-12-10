@@ -32,7 +32,7 @@ module.exports = {
         }
       }
     ]
-  },
+  }, // module
   plugins: [
     new HtmlWebpackPlugin({
       title: '---My App',
