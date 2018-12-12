@@ -98,6 +98,11 @@ const App = () => {
             </li>
           </ul>
         </div>
+        <div>
+          <h2>Fundamental Patterns</h2>
+          <h2>Reducer Composition</h2>
+          <p>One reducer passes a portion of the state to another reducer only knows how to update that specific portion.</p>
+        </div>
 
 
         <div>

@@ -13,15 +13,17 @@ const initialState = {
 
 
 /**
- * Perform calculations on @stateTodos array and returns a new array
- * @param {*} stateTodos todos array from the state
+ * Only returns (depending on the @action):
+ * - An updated copy of the state's "todos" array (@stateTodosArray)
+ * - Or the @stateTodosArray itself by default
+ * @param {*} stateTodosArray todos array from the state
  * @param {*} action 
  */
-const todos = (stateTodos = [], action) => {
+const todos = (stateTodosArray = [], action) => {
   switch (action.type) {
     case ADD_TODO:
       return [
-        ...stateTodos,
+        ...stateTodosArray,
         {
           id: action.id,
           text: action.text,
@@ -30,7 +32,7 @@ const todos = (stateTodos = [], action) => {
       ]
 
     case TOGGLE_TODO:
-      return stateTodos.map(
+      return stateTodosArray.map(
         todo =>
           todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
       )
@@ -42,7 +44,10 @@ const todos = (stateTodos = [], action) => {
 
 
 /**
- * Perform calculations on the @state and returns a new state
+ * Returns (depending on the @action):
+ * - An updated version of the @state
+ * - Or the @state itself by default
+ * NOTE: uses "Reducer Composition" pattern with todos()
  * @param {*} state 
  * @param {*} action 
  */
