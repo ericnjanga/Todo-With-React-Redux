@@ -1,14 +1,16 @@
 /**
  * Action types
  */
-import { 
+import actionTypes from './_actionTypes'
+const {
   ADD_TODO,
-  SET_VISIBILITY_FILTER,
   TOGGLE_TODO,
+  SET_VISIBILITY_FILTER,
   SHOW_ALL,
   SHOW_COMPLETED,
   SHOW_ACTIVE
-} from './_actionTypes'
+} = actionTypes
+
 
 /**
  * Visibility filters 

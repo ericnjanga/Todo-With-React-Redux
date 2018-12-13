@@ -1,3 +1,11 @@
+
+import actionTypes from './../../actions/_actionTypes'
+const {
+  ADD_TODO,
+  TOGGLE_TODO,
+} = actionTypes
+
+
 /**
  * Only returns (depending on the @action):
  * - An updated copy of the state's "todos" array (@stateTodosArray)
