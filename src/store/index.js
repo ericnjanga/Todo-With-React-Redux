@@ -7,6 +7,8 @@ import { addTodo, toggleTodo, setVisibilityFilter, VisibilityFilters } from '../
 
 const store = createStore(rootReducer)
 
+// *** TESTS ***
+// *** TESTS ***
 // log initial state
 console.log(store.getState())
 // ...
@@ -20,5 +22,7 @@ store.dispatch(toggleTodo(1))
 store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED))
 // ...
 unsubscribe()
+// *** TESTS ***
+// *** TESTS ***
 
 export default store
