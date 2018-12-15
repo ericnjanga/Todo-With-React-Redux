@@ -9,6 +9,7 @@ https://redux.js.org/basics/reducers
 # ---------------
 1) Given the same arguments, the reducer should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.
 2) Redux always calls our reducer with an undefined state for the first time. 
+3) a reducer is a pure function. It only computes the next state. It should be completely predictable: calling it with the same inputs many times should produce the same outputs. It shouldn't perform any side effects like API calls or router transitions. These should happen before an action is dispatched
 
 # BEST PRACTICES :
 # ---------------

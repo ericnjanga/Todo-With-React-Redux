@@ -27,6 +27,29 @@ const App = () => {
           </ul>
         </div>
         <div>
+          <h2><a href="https://redux.js.org/basics/data-flow" target="_blank">Data Flow</a></h2>
+          <p>Redux architecture revolves around a strict unidirectional data flow.</p>
+          <p>This means that all data in an application follows the same lifecycle pattern, making the logic of your app more predictable and easier to understand. It also encourages data normalization, so that you don't end up with multiple, independent copies of the same data that are unaware of one another.</p>
+
+          <h3>The data lifecycle in any Redux app follows these 4 steps:</h3>
+          <dl>
+            <dt>You call <code>store.dispatch(action)</code> from anywhere in your app, including components and XHR callbacks, or even at scheduled intervals.</dt>
+            <dt style={{color:'red!important'}}>
+              The Redux store calls the reducer function you gave it.
+            </dt>
+            <dd style={{color:'red!important'}}>The store will pass two arguments to the reducer: the current state tree and the action.</dd>
+            <dt style={{color:'orange!important'}}>The root reducer may combine the output of multiple reducers into a single state tree.</dt>
+            <dd style={{color:'orange!important'}}>How you structure the root reducer is completely up to you. Redux ships with a 
+                  <a href="https://redux.js.org/api/combinereducers" target="_blank">combineReducers()</a> helper function, useful for “splitting” the root reducer into separate functions that each manage one branch of the state tree.
+            </dd>
+            <dt>The Redux store saves the complete state tree returned by the root reducer.</dt>
+            <dd>
+              This new tree is now the next state of your app! Every listener registered with store.subscribe(listener) will now be invoked; listeners may call store.getState() to get the current state.
+              Now, the UI can be updated to reflect the new state. If you use bindings like <a href="https://github.com/gaearon/react-redux" target="_blank">React Redux</a>, this is the point at which component.setState(newState) is called.
+            </dd>
+          </dl>
+        </div>
+        <div>
           <h3>Container component</h3>
           <p>React component that uses <code>store.subscribe()</code> to read a part of the Redux state tree and supply props to a presentational component it renders.</p>
           <p>They're the ones hooking up presentational containers with Redux.</p>
