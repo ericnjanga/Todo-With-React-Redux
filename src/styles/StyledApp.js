@@ -4,16 +4,17 @@ const style = {};
 style.AppContainer = styled.div`
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  background: #eee;
 
   code {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     display: inline-block;
     font-family: "Source Code Pro", Menlo, monospace;
-    font-size: 2.4rem;
+    font-size: 0.9rem;
     border-radius: 3px;
     background-color: #F5F7F9;
-    padding: 10px 15px;
+    padding: 5px 7px;
     margin: 0 1px;
     color: #744cbc;
     &: after {

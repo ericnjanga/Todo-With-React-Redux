@@ -1,9 +1,10 @@
 import React from 'react';
 
-import style from './../styles/StyledApp';
+import style from './../styles/StyledApp'
 import Footer from './Footer'
 import AddTodo from './../containers/AddTodo'
 import VisibleTodoList from './../containers/VisibleTodoList'
+import './../../node_modules/normalize.css/normalize.css'
 
 
 const App = () => {
@@ -12,20 +13,30 @@ const App = () => {
 
   return (
     <AppContainer>
-      <h1>+++ First react app with Webpack????</h1>
+      <h1>Todo</h1>
       <AddTodo />
       <VisibleTodoList />
       <Footer />
 
       <div className="lexic">
+        <h2>Reflections on React-Redux</h2>
+        <div>
+          <ol>
+            <li>The entire application doesn't connect to the redux-store. Only components <code>(containers)</code> which to fetch from or dispatch to the store connect.</li>
+          </ol>
+        </div>
+
+
         <h2>Thoughts</h2>
         <div>
-          <h2>Why using Redux?</h2>
+          <h3>Why using Redux?</h3>
           <ul>
             <li>different parts of the code can’t change the state arbitrarily, causing hard-to-reproduce bugs.</li>
             <li>Gives a better understanding of what's going on in the app (Changes are only made through actions). If something changed, we know why it changed (bye bye voodoo code)</li>
           </ul>
         </div>
+
+
         <div>
           <h2><a href="https://redux.js.org/basics/data-flow" target="_blank">Data Flow</a></h2>
           <p>Redux architecture revolves around a strict unidirectional data flow.</p>

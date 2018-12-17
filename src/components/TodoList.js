@@ -6,6 +6,9 @@ import Todo from './Todo';
 const TodoList = ({ todos, onTodoClick }) => {
 
   // const { Li } = style;
+  console.group('TodoList')
+  console.log(todos)
+  console.groupEnd()
 
   return (
     <ul>
