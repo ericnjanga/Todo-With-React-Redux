@@ -6,8 +6,8 @@ Logic-based components which:
 - Are aware of presentational components to which they pass "redux-state data" and "redux dispatch" functions
 
 
-## How Redux store state is transformed and passed down to presentational components!
-- Use of mapStateToProps: That describes how to transform the current Redux store state into the props you want to pass to a presentational component you are wrapping. 
+## How Redux store state is "transformed" and "passed down" to presentational components!
+- Use of mapStateToProps: It describes how to transform the current Redux store state into the props you want to pass to a presentational component you are wrapping. 
 
 
 ## How actions are dispatched to the Redux store state!
