@@ -1,5 +1,6 @@
 import React from 'react';
-import FitlerLink from './../containers/FilterLink'
+import FilterLink from './../containers/FilterLink'
+import CountTodo from './../containers/CountTodo'
 import { VisibilityFilters } from './../actions'
 // import style from './../styles/StyledTodoList';
 
@@ -9,11 +10,23 @@ const Footer = () => {
 
   return (
     <p>
-      Show: <FitlerLink filter={VisibilityFilters.SHOW_ALL}>All</FitlerLink>
+      Show: <FilterLink filter={VisibilityFilters.SHOW_ALL}>
+        All <small>
+          <CountTodo filter={VisibilityFilters.SHOW_ALL} />
+        </small>
+      </FilterLink>
       {', '}
-      <FitlerLink filter={VisibilityFilters.SHOW_ACTIVE}>Active</FitlerLink>
+      <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>
+        Active <small>
+          <CountTodo filter={VisibilityFilters.SHOW_ACTIVE} />
+        </small>
+      </FilterLink>
       {', '}
-      <FitlerLink filter={VisibilityFilters.SHOW_COMPLETED}>Completed</FitlerLink>
+      <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
+        Completed <small>
+          <CountTodo filter={VisibilityFilters.SHOW_COMPLETED} />
+        </small>
+      </FilterLink>
     </p>
   );
 }

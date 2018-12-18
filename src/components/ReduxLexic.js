@@ -22,6 +22,14 @@ const ReduxLexic = () => {
       </div>
 
 
+      <h2>Questions</h2>
+      <div>
+        <h3>Where is the Redux Store?</h3>
+        <h4>I do understand what the store is, but I've noticed informations saved on the store are persistent. So where is that store actually?</h4>
+        <p>?????</p>
+      </div>
+
+
       <div>
         <h2>
           <GotoLink url="https://redux.js.org/basics/data-flow" icon opensNewTab>Data Flow</GotoLink>
